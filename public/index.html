@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login · Gestor de Playlists</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script defer src="/js/messages.js"></script>
+</head>
+<body class="auth-page">
+  <header class="main-header">
+    <h1>Gestor de Playlists</h1>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card">
+      <h2>Iniciar sesión</h2>
+
+      <p id="message" class="auth-message"></p>
+
+      <form action="/login" method="POST" class="auth-form">
+        <label>
+          Usuario o email
+          <input type="text" name="identifier" required />
+        </label>
+
+        <label>
+          Contraseña
+          <input type="password" name="password" required minlength="8" />
+        </label>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+
+      <p class="auth-link">
+        ¿No tienes cuenta?
+        <a href="/register">Regístrate aquí</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Proyecto Playlists · Login</p>
+  </footer>
+</body>
+</html>

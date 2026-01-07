@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soupify - Admin</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+
+<body class="home-page">
+  <header class="main-header">
+    <div class="brand">
+      <img src="/assets/logo.png" class="logo" alt="Soupify"/>
+      <h1>Soupify</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/home">Inicio</a>
+      <a href="/catalog">Catálogo</a>
+      <a href="/playlist.html">Mis Playlists</a>
+      <a href="/favorites">Favoritos</a>
+      <a href="/history">Historial</a>
+      <a href="/admin">Admin</a>
+      <a href="/logout" class="btn-cerrarSesion">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <section class="home-card">
+      <h2>Panel de Administración</h2>
+      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:10px;">
+        <div class="playlist-card" style="min-width:220px;">
+          <h3>Usuarios</h3>
+          <p id="statUsers" class="playlist-songs">—</p>
+        </div>
+        <div class="playlist-card" style="min-width:220px;">
+          <h3>Canciones</h3>
+          <p id="statSongs" class="playlist-songs">—</p>
+        </div>
+        <div class="playlist-card" style="min-width:220px;">
+          <h3>Playlists</h3>
+          <p id="statPlaylists" class="playlist-songs">—</p>
+        </div>
+      </div>
+
+      <hr style="margin:18px 0; border-color:#1c1c1c;">
+
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <div style="flex:1; min-width:320px;">
+          <h3>Canciones (últimas 200)</h3>
+          <div id="songsAdminGrid" class="songs-grid"></div>
+        </div>
+
+        <div style="flex:1; min-width:320px;">
+          <h3>Playlists (últimas 200)</h3>
+          <div id="playlistsAdminList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

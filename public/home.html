@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soupify - Inicio</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+  <script src="/js/home.js" defer></script>
+</head>
+
+<body class="home-page">
+  <header class="main-header">
+    <div class="brand">
+      <img src="/assets/logo.png" class="logo" alt="Soupify"/>
+      <h1>Soupify</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/home">Inicio</a>
+      <a href="/catalog">Catálogo</a>
+      <a href="/playlist.html">Mis Playlists</a>
+      <a href="/favorites">Favoritos</a>
+      <a href="/history">Historial</a>
+      <a href="/admin">Admin</a>
+      <a href="/logout" class="btn-cerrarSesion">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <section class="home-card">
+      <h2>Buscar en iTunes</h2>
+
+      <form id="searchForm" class="search-bar">
+        <input id="searchInput" type="text" placeholder="Busca una canción, artista o álbum..." autocomplete="off"/>
+        <button class="btn-primary" type="submit">Buscar</button>
+      </form>
+
+      <p id="songsStatus" class="songs-status"></p>
+      <div id="songsGrid" class="songs-grid"></div>
+    </section>
+  </main>
+
+  <!-- MODAL AÑADIR A PLAYLIST -->
+  <div id="playlistModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Añadir a playlist</h3>
+        <button id="closeModal" class="modal-close">✖</button>
+      </div>
+
+      <div id="playlistList" class="playlist-options"></div>
+
+      <div class="modal-create">
+        <input id="newPlaylistName" placeholder="Nombre de nueva playlist..." autocomplete="off"/>
+        <button id="createPlaylistBtn" class="btn-primary">Crear + añadir</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAYER GLOBAL -->
+  <section id="globalPlayer" class="global-player">
+    <div class="gp-left">
+      <img id="gpCover" src="/assets/logo.png" alt="cover" class="gp-cover">
+      <div class="gp-meta">
+        <div id="gpTitle" class="gp-title">—</div>
+        <div id="gpArtist" class="gp-artist"></div>
+        <div id="gpTime" class="gp-time">0:00 / 0:00</div>
+      </div>
+    </div>
+
+    <div class="gp-controls">
+      <button id="gpPrev">⏮</button>
+      <button id="gpPlay">▶</button>
+      <button id="gpPause">⏸</button>
+      <button id="gpStop">⏹</button>
+      <button id="gpNext">⏭</button>
+    </div>
+
+    <div class="gp-right">
+      <input id="gpProgress" type="range" min="0" max="100" value="0">
+      <div class="gp-vol">
+        <button id="gpMute">🔇</button>
+        <input id="gpVolume" type="range" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+
+    <aside class="gp-queue">
+      <div class="gp-queue-title">Cola</div>
+      <ul id="gpQueue"></ul>
+    </aside>
+  </section>
+
+<script src="/js/player.js?v=20260104"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => Player.bindUI());
+  </script>
+</body>
+</html>
