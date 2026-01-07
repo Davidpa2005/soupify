@@ -8,7 +8,7 @@ La aplicación ha sido desarrollada desde cero, sin el uso de frameworks, utiliz
 
 FUNCIONALIDAD GENERAL
 
-Soupify permite a los usuarios registrarse e iniciar sesión para acceder a la plataforma. Una vez autenticados, los usuarios pueden explorar el catálogo musical disponible, reproducir canciones mediante un reproductor basado en HTML5 y crear playlists personalizadas en las que organizar su música favorita. Las playlists pueden modificarse en cualquier momento, añadiendo o eliminando canciones, y pueden configurarse como públicas o privadas.
+Soupify permite a los usuarios registrarse e iniciar sesión para acceder a la plataforma. Una vez autenticados, los usuarios pueden explorar el catálogo musical disponible, reproducir canciones mediante un reproductor basado en HTML5 y crear playlists personalizadas en las que organizar su música favorita. Las playlists pueden modificarse en cualquier momento, añadiendo o eliminando canciones.
 
 El sistema diferencia entre usuarios estándar y administradores. Los usuarios administradores disponen de funcionalidades adicionales que les permiten gestionar el catálogo musical, añadiendo, editando o eliminando canciones del sistema. Esta diferenciación de roles garantiza un control adecuado del contenido y del funcionamiento general de la aplicación.
 
